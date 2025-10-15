@@ -79,17 +79,3 @@
     "react-dom": "18.2.0"
   }
 }
-```
-
-Key changes:
-1. Downgraded React and React DOM from v19 to v18.2.0 (the most recent stable version of React 18)
-2. Updated the @types/react and @types/react-dom to match
-3. Added both "resolutions" and "overrides" fields to ensure all packages use these versions
-
-After making these changes:
-1. Save the updated package.json file
-2. Commit and push:
-```
-   git add package.json
-   git commit -m "Downgrade React to v18.2.0 for compatibility with react-day-picker"
-   git push
