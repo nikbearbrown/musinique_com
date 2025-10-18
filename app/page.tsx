@@ -1,221 +1,103 @@
-import PrimaryButton from "@/components/ui/primary-button"
-import SecondaryButton from "@/components/ui/secondary-button"
-import { BookOpen, Palette, Music, Dumbbell, Code } from "lucide-react"
-import Link from "next/link"
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="w-full py-8 md:py-16 lg:py-20 xl:py-24">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 xl:grid-cols-3">
-            <div className="flex flex-col justify-center space-y-4 lg:col-span-1">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Nik Bear Brown
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  I teach, draw, code, and write songs. My work lives where
-                  curiosity and craft meet—using AI to help people learn, make,
-                  and do more with integrity.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <PrimaryButton href="/about">
-                  About Me
-                </PrimaryButton>
-                <SecondaryButton href="/contact">
-                  Contact
-                </SecondaryButton>
-              </div>
-            </div>
-            <div className="flex items-center justify-center lg:col-span-2">
-              <div className="relative w-full aspect-video">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-md"
-                  src="https://www.youtube.com/embed/aEjgD65h1mY?si=UX-tdS58VJ5WzIPn"
-                  title="NikBearBrown.com Introduction"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
+          <li className="mb-2 tracking-[-.01em]">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+              app/page.tsx
+            </code>
+            .
+          </li>
+          <li className="tracking-[-.01em]">
+            Save and see your changes instantly.
+          </li>
+        </ol>
+
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
         </div>
-      </section>
-
-      {/* Main Areas Section */}
-      <section className="w-full py-12 md:py-24 bg-muted">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">My Work & Passions</h2>
-              <p className="text-muted-foreground max-w-[700px]">
-                These are the through-lines of my life: teaching, drawing, research, music,
-                building for social good, and staying healthy enough to keep going.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {/* Teaching & Workshops */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <BookOpen className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Teaching & Workshops</h3>
-              <p className="text-muted-foreground mb-4">
-                I teach AI, ML, and programming by making things with students.
-                We prototype, test, and learn out loud. I run sessions on prompt
-                engineering, agentic AI, and responsible deployment for classrooms
-                and teams.
-              </p>
-              <Link href="/classes" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
-                Explore courses
-              </Link>
-            </div>
-
-            {/* Illustration */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <Palette className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Illustration</h3>
-              <p className="text-muted-foreground mb-4">
-                I draw to think. From hand sketches to AI-assisted visuals, I build
-                storyboards, diagrams, and covers for classes, research, and nonprofit
-                projects. Pictures turn complex ideas into invitations.
-              </p>
-              <Link href="/art" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
-                View artwork
-              </Link>
-            </div>
-
-            {/* Music */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <Music className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Music</h3>
-              <p className="text-muted-foreground mb-4">
-                I write songs and modern takes on public-domain tunes. Music keeps me honest
-                and curious. You’ll find narrative ballads and experiments that blur
-                folk traditions with digital craft.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium underline underline-offset-4 hover:text-foreground"
-                >
-                  Listen on Spotify
-                </Link>
-                <Link
-                  href="/music"
-                  className="text-sm font-medium underline underline-offset-4 hover:text-foreground"
-                >
-                  Project notes
-                </Link>
-              </div>
-            </div>
-
-            {/* Research & Writing */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <Code className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Research & Writing</h3>
-              <p className="text-muted-foreground mb-4">
-                I publish on AI, design, and computational biology. I also write
-                books about AI in creative practice and storytelling. Research
-                is how I test ideas; writing is how I share them.
-              </p>
-              <Link href="/research" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
-                Read more
-              </Link>
-            </div>
-
-            {/* Fitness */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4 flex space-x-2">
-                <Dumbbell className="h-10 w-10" />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-10 w-10"
-                >
-                  <path d="M12 2a5 5 0 0 0-5 5c0 2 2 4 5 4s5-2 5-4a5 5 0 0 0-5-5z" />
-                  <path d="M20 17.5c0 2.485-4 4.5-8 4.5s-8-2.015-8-4.5S8 13 12 13s8 2.015 8 4.5z" />
-                  <path d="M12 13v9" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Fitness & Wellness</h3>
-              <p className="text-muted-foreground mb-4">
-                Former wrestler with a passion for CrossFit, yoga, and maintaining
-                a balanced lifestyle. Committed to physical and mental wellness as
-                a foundation for creativity and productivity.
-              </p>
-              <Link href="/blog" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
-                Read my fitness journey
-              </Link>
-            </div>
-
-            {/* Nonprofit */}
-            <div className="border p-8 rounded-lg bg-card hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <Code className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Humanitarians AI</h3>
-              <p className="text-muted-foreground mb-4">
-                Founder of Humanitarians AI, a 501(c)(3) nonprofit dedicated to
-                developing ethical AI solutions for education, healthcare, and
-                social impact through research and mentorship.
-              </p>
-              <Link href="/projects" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
-                Explore our projects
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Connect Section */}
-      <section className="w-full py-12 md:py-24 bg-muted">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <div className="mb-4 text-sm font-medium">CONNECT WITH ME</div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-5xl mb-6">Let's Collaborate</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl">
-              Whether you're interested in AI education, music collaboration, art projects,
-              or nonprofit initiatives, I'm always open to connecting with like-minded
-              individuals and organizations.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <PrimaryButton href="/consulting">
-                Work with Me
-              </PrimaryButton>
-              <SecondaryButton href="/contact">
-                Get in Touch
-              </SecondaryButton>
-              <SecondaryButton href="https://www.youtube.com/@nikbearbrown" target="_blank" rel="noopener noreferrer">
-                YouTube
-              </SecondaryButton>
-              <SecondaryButton href="https://github.com/nikbearbrown" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </SecondaryButton>
-            </div>
-          </div>
-        </div>
-      </section>
+      </main>
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
     </div>
-  )
+  );
 }

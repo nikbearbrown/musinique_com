@@ -1,86 +1,33 @@
-# Nik Bear Brown Website
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-
-### Required Software
-- **Node.js and npm**
-  - Download from [Node.js official website](https://nodejs.org/)
-  - Choose the LTS (Long Term Support) version
-  - The installer includes both Node.js and npm
-
-- **Git** (for version control)
-  - Download from [Git's official website](https://git-scm.com/downloads)
-
-### System Requirements
-- Operating System: Windows, macOS, or Linux
-- RAM: At least 4GB recommended
-- Disk Space: At least 1GB free space
-- Internet connection for downloading packages
-
-### Installation by Operating System
-
-#### Windows
-1. Download and run the Node.js installer from [Node.js website](https://nodejs.org/)
-2. Download and run the Git installer from [Git website](https://git-scm.com/downloads)
-3. Restart your computer after installation
-
-#### macOS
-```bash
-# Using Homebrew
-brew install node
-brew install git
-```
-
-#### Linux (Ubuntu/Debian)
-```bash
-sudo apt update
-sudo apt install nodejs npm
-sudo apt install git
-```
-
-### Verifying Installation
-After installation, verify that everything is set up correctly:
-```bash
-node --version
-npm --version
-git --version
-```
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, install dependencies:
-
-```bash
-npm install --legacy-peer-deps
-```
-
-then, run the development server:
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Troubleshooting
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-If you encounter any issues during installation:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. **npm install fails**
-   - Clear npm cache: `npm cache clean --force`
-   - Try using `--legacy-peer-deps` flag if there are dependency conflicts
-   - Ensure you're using a compatible Node.js version
+## Learn More
 
-2. **Permission errors**
-   - Windows: Run terminal as administrator
-   - Mac/Linux: Use `sudo` for system-wide installations
+To learn more about Next.js, take a look at the following resources:
 
-3. **Network issues**
-   - Check your internet connection
-   - If behind a proxy, configure npm accordingly
-   - Try using a different npm registry: `npm config set registry https://registry.npmjs.org/`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
