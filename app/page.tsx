@@ -1,103 +1,163 @@
-import Image from "next/image";
+import PrimaryButton from "@/components/ui/primary-button"
+import SecondaryButton from "@/components/ui/secondary-button"
+import { Book, Code, Music, MessageSquare } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col w-full">
+      {/* Hero Section */}
+      <section className="w-full py-8 md:py-16 lg:py-20 xl:py-24">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 xl:grid-cols-3">
+            <div className="flex flex-col justify-center space-y-4 lg:col-span-1">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Harnessing AI for social good.
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  A 501(c)(3) nonprofit organization dedicated to developing ethical AI solutions that address real-world
+                  challenges in education, healthcare, nonprofits, and the arts.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <PrimaryButton href="/about">
+                  About Us
+                </PrimaryButton>
+                <SecondaryButton href="/contact">
+                  Contact Us
+                </SecondaryButton>
+              </div>
+            </div>
+            <div className="flex items-center justify-center lg:col-span-2">
+              <div className="relative w-full aspect-video">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src="https://www.youtube.com/embed/GN7yQntWJHU?si=gTXWalKvsLDP8nbV"
+                  title="Musinique Introduction"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Partners Section */}
+      {/* <section className="w-full py-12 md:py-24 bg-white dark:bg-gray-800">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tighter md:text-3xl">Companies We Work With</h2>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 items-center justify-center py-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="flex items-center justify-center">
+                <div className="h-16 w-16 rounded-full bg-gray-200"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Key Programs Section */}
+      <section className="w-full py-12 md:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">KEY PROGRAMS & INITIATIVES</h2>
+              <p className="text-muted-foreground max-w-[600px]">
+                Our flagship programs that combine AI technology with social impact to create meaningful change.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {/* Fellows Program */}
+            <div className="border p-8 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div className="mb-4">
+                <Book className="h-10 w-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">FELLOWS PROGRAM</h3>
+              <p className="text-muted-foreground mb-4">
+                Join our community of AI researchers and developers working on humanitarian projects. Get mentorship, resources, and support to build impactful AI solutions.
+              </p>
+              <Link href="/fellows" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
+                Learn more
+              </Link>
+            </div>
+
+            {/* Lyrical Literacy */}
+            <div className="border p-8 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div className="mb-4">
+                <Music className="h-10 w-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">LYRICAL LITERACY</h3>
+              <p className="text-muted-foreground mb-4">
+                An innovative program that combines AI with creative writing and music to enhance literacy skills. Using technology to make learning more engaging and accessible.
+              </p>
+              <Link href="/lyrical-literacy" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
+                Learn more
+              </Link>
+            </div>
+
+            {/* AI for Good */}
+            <div className="border p-8 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div className="mb-4">
+                <Code className="h-10 w-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">AI FOR GOOD</h3>
+              <p className="text-muted-foreground mb-4">
+                Developing and deploying AI-powered tools for real-world social impact with an emphasis on inclusivity and accessibility.
+              </p>
+              <Link href="/ai-for-good" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
+                Learn more
+              </Link>
+            </div>
+
+            {/* Botspeak */}
+            <div className="border p-8 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div className="mb-4">
+                <MessageSquare className="h-10 w-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">BOTSPEAK</h3>
+              <p className="text-muted-foreground mb-4">
+                Exploring the fascinating world of AI through hands-on projects and in-depth demos—no rules, just curiosity-driven innovation.
+              </p>
+              <Link href="/botspeak" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
+                Learn more
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donate Section */}
+      <section className="w-full py-12 md:py-24 bg-gray-100 dark:bg-gray-900">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+            <div className="mb-4 text-sm font-medium">JOIN OUR MISSION</div>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-5xl mb-6">HELP US USE AI FOR THE GREATER GOOD</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Your support helps us develop ethical AI solutions that address real-world challenges in education,
+              healthcare, nonprofits, and the arts. Join us in our mission to ensure AI benefits everyone, especially
+              underserved communities.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              {/* <PrimaryButton href="/donate">
+                DONATE NOW
+              </PrimaryButton>
+              <SecondaryButton href="/contact">
+                VOLUNTEER
+              </SecondaryButton> */}
+              <PrimaryButton href="https://www.youtube.com/@Musinique">
+                YOUTUBE
+              </PrimaryButton>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
