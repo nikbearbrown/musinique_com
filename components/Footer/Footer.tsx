@@ -37,10 +37,7 @@ export default function Footer() {
                 )}
               </Link>
               <p className="mt-4 text-sm text-muted-foreground">
-                Musinique Incorporated
-                <br />A 501(c)(3) nonprofit organization
-                {/* <br />State ID: 001846362 | EIN: 33-1984805
-               <br />AI for Good™ */}
+                Musinique LLC
               </p>
               <div className="mt-6 flex space-x-4 items-center">
                 <Link href="https://www.youtube.com/@Musinique" className="text-sm hover:text-primary transition-colors">
@@ -97,6 +94,24 @@ export default function Footer() {
                     <circle cx="4" cy="4" r="2" />
                   </svg>
                 </Link>
+                <Link href="https://x.com/musinique" className="text-sm hover:text-primary transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="inline-block"
+                  >
+                    <path d="M4 4l11.733 16h4.267l-11.733-16z" />
+                    <path d="M4 20l6.768-6.768" />
+                    <path d="M12.299 13.299l7.701-9.299" />
+                  </svg>
+                </Link>
                 <Link href="mailto:bear@bearbrown.co" className="text-sm hover:text-primary transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -114,22 +129,6 @@ export default function Footer() {
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </Link>
-                {/* <Link href="https://twitter.com/humanitariansai" className="text-sm hover:text-primary transition-colors">
-                 <svg
-                   xmlns="http://www.w3.org/2000/svg"
-                   width="16"
-                   height="16"
-                   viewBox="0 0 24 24"
-                   fill="none"
-                   stroke="currentColor"
-                   strokeWidth="2"
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   className="inline-block"
-                 >
-                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                 </svg>
-               </Link> */}
                 <ThemeToggle />
               </div>
             </div>
