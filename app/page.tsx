@@ -13,20 +13,18 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4 lg:col-span-1">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Harnessing AI for social good.
+                  Humans + AI + Music
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  A 501(c)(3) nonprofit organization dedicated to developing ethical AI solutions that address real-world
-                  challenges in education, healthcare, nonprofits, and the arts.
+                  Musinique, LLC builds tools for Indie musicians, poets and songwriters to be more creative and productive.
+                  Great music is Humans + AI not just AI. We are also the Indie Analytics Engine for artists to make data
+                  based decisions including finding and ranking the quality of playlists.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <PrimaryButton href="/about">
+                <PrimaryButton href="https://www.musinique.com/about">
                   About Us
                 </PrimaryButton>
-                <SecondaryButton href="/contact">
-                  Contact Us
-                </SecondaryButton>
               </div>
             </div>
             <div className="flex items-center justify-center lg:col-span-2">
@@ -50,12 +48,23 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">MUSINIQUE, LLC</h2>
-              <p className="text-muted-foreground max-w-[800px]">
-                Musinique makes AI tools to promote Indie artists and Indie voices. Musinique also has a record label and publishing company to create and support independent thought and art. In particular, charging artists to get on playlists rather than adding them based on an honest reaction to their music is a major pain point for struggling artists. Our playlists search tool (coming soon) will easily allow indie artists to find playlists with integrity and avoid the exploitative "A&R" people. Musinique writes lots of protest songs in our belief that the power of music and compassion is a better path for change than hate. Our resident poet, Nik Bear Brown, also creates spoken word compositions and reads public domain poems (typically pre-1929). Musinique also produces language learning, music learning and reading enhancement songs for the 501 (c3) non-profit Humanitarians AI. 
-                <Link href="https://www.humanitarians.ai/" className="ml-1 text-blue-600 hover:underline">
-                  https://www.humanitarians.ai/
-                </Link>
-              </p>
+              <div className="text-muted-foreground max-w-[800px] space-y-4">
+                <p>
+                  Musinique makes AI tools to promote Indie artists and Indie voices. Musinique also has a record label and publishing company to create and support independent thought and art.
+                </p>
+                <p>
+                  In particular, charging artists to get on playlists rather than adding them based on an honest reaction to their music is a major pain point for struggling artists. Our playlists search tool (coming soon) will easily allow indie artists to find playlists with integrity and avoid the exploitative "A&R" people.
+                </p>
+                <p>
+                  Musinique writes lots of protest songs in our belief that the power of music and compassion is a better path for change than hate. Our resident poet, Nik Bear Brown, also creates spoken word compositions and reads public domain poems (typically pre-1929).
+                </p>
+                <p>
+                  Musinique also produces language learning, music learning and reading enhancement songs for the 501 (c3) non-profit Humanitarians AI.
+                  <Link href="https://www.humanitarians.ai/" className="ml-1 text-blue-600 hover:underline">
+                    https://www.humanitarians.ai/
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
