@@ -97,7 +97,7 @@ export default function Footer() {
                     <circle cx="4" cy="4" r="2" />
                   </svg>
                 </Link>
-                <Link href="mailto:info@humanitarians.ai" className="text-sm hover:text-primary transition-colors">
+                <Link href="mailto:bear@bearbrown.co" className="text-sm hover:text-primary transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -142,8 +142,6 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">Company</h3>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
-                <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</Link></li>
-                {/* <li><Link href="/donate" className="text-muted-foreground hover:text-foreground transition-colors">Donate</Link></li> */}
               </ul>
             </div>
 
@@ -152,15 +150,8 @@ export default function Footer() {
              <h3 className="text-lg font-semibold">Projects</h3>
              <ul className="space-y-2">
                <li><Link href="/projects" className="text-muted-foreground hover:text-foreground transition-colors font-medium">All Projects</Link></li>
-               <li><Link href="/aiskunkworks" className="text-muted-foreground hover:text-foreground transition-colors">AI Skunkworks</Link></li>
-               <li><Link href="/dayhoff" className="text-muted-foreground hover:text-foreground transition-colors">Dayhoff</Link></li>
-               <li><Link href="/dewey" className="text-muted-foreground hover:text-foreground transition-colors">Dewey</Link></li>              
-               <li><Link href="https://lullabize.humanitarians.ai/" className="text-muted-foreground hover:text-foreground transition-colors">Lullabize</Link></li>
-               <li><Link href="/madison" className="text-muted-foreground hover:text-foreground transition-colors">Madison</Link></li>
-               <li><Link href="/mycroft" className="text-muted-foreground hover:text-foreground transition-colors">Mycroft</Link></li>
-               <li><Link href="/northeastern" className="text-muted-foreground hover:text-foreground transition-colors">Northeastern</Link></li>
-               <li><Link href="/popper" className="text-muted-foreground hover:text-foreground transition-colors">Popper</Link></li>
-               <li><Link href="/raman-effect" className="text-muted-foreground hover:text-foreground transition-colors">RAMAN Effect</Link></li>              
+               <li><Link href="/indie" className="text-muted-foreground hover:text-foreground transition-colors">Indie Analytics Engines</Link></li>
+          
              </ul>
            </div> */}
 
@@ -191,16 +182,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Get Involved */}
-            {/* <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Get Involved</h3>
-              <ul className="space-y-2">
-                <li><Link href="/fellows" className="text-muted-foreground hover:text-foreground transition-colors">Fellows</Link></li>
-                <li><Link href="/mentors" className="text-muted-foreground hover:text-foreground transition-colors">Mentors</Link></li>
-                <li><Link href="/donate" className="text-muted-foreground hover:text-foreground transition-colors">Donate</Link></li>
-                <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</Link></li>
-              </ul>
-            </div> */}
 
             {/* Legal & Privacy */}
             <div className="space-y-4">
@@ -238,7 +219,7 @@ export default function Footer() {
               specifically for our organization. We maintain proper documentation for all visual and written content
               as required by Google Ad Grants Policy. Musinique respects intellectual property rights and does
               not use copyrighted materials without appropriate permission or licensing. For questions regarding our
-              content or to request permission to use our materials, please <Link href="mailto:info@humanitarians.ai" className="text-primary hover:underline">contact us</Link>.
+              content or to request permission to use our materials, please <Link href="mailto:bear@bearbrown.co" className="text-primary hover:underline">contact us</Link>.
             </p>
           </div>
         </div>
@@ -246,7 +227,7 @@ export default function Footer() {
         {/* Contact Information & Transparency */}
         <div className="mt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            <strong>Contact Us:</strong> Musinique | <a href="mailto:info@humanitarians.ai" className="text-primary hover:underline">info@humanitarians.ai</a>
+            <strong>Contact Us:</strong> Musinique | <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
           </p>
           {/* <p className="mt-2 text-sm text-muted-foreground">
             Support our mission by <Link href="/donate" className="text-primary hover:underline">donating</Link> today.
