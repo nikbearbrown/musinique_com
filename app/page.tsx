@@ -73,14 +73,14 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Lyrical Literacy - Updated with URL */}
+            {/* Lyrical Literacy - Updated with enhanced description */}
             <div className="border p-8 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <Music className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-2">LYRICAL LITERACY</h3>
               <p className="text-muted-foreground mb-4">
-                An innovative program that combines AI with creative writing and music to enhance literacy skills. Using technology to make learning more engaging and accessible.
+                Musinique serves as the creative engine behind this pioneering educational initiative, providing professional music production and engineering expertise. Led by resident poet Nik Bear Brown, Musinique transforms educational concepts into engaging musical experiences that enhance cognitive development, language acquisition, and emotional growth through the neurological benefits of music.
               </p>
               <Link href="https://www.humanitarians.ai/lyrical-literacy" className="text-sm font-medium underline underline-offset-4 hover:text-foreground">
                 Learn more
