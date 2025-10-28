@@ -146,14 +146,14 @@ export default function Footer() {
             </div>
 
             {/* Projects */}
-            {/* <div className="space-y-4">
+            <div className="space-y-4">
              <h3 className="text-lg font-semibold">Projects</h3>
              <ul className="space-y-2">
                <li><Link href="/projects" className="text-muted-foreground hover:text-foreground transition-colors font-medium">All Projects</Link></li>
                <li><Link href="/indie" className="text-muted-foreground hover:text-foreground transition-colors">Indie Analytics Engines</Link></li>
-          
+              <li><Link href="/indie" className="text-muted-foreground hover:text-foreground transition-colors">Musinique Song Writer</Link></li>       
              </ul>
-           </div> */}
+           </div> 
 
             {/* Support Artists */}
             <div className="space-y-4">
