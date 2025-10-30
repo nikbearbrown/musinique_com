@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 
 interface VideoThumbnailProps {
@@ -8,7 +7,7 @@ interface VideoThumbnailProps {
 }
 
 const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ title, videoId }) => (
-  <a
+  
     href={`https://www.youtube.com/watch?v=${videoId}`}
     target="_blank"
     rel="noopener noreferrer"
@@ -25,6 +24,7 @@ const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ title, videoId }) => (
             alt={title}
             className="w-full h-full object-cover object-center transition"
           />
+        </picture>
         <div className="absolute inset-0 bg-black/40 rounded-lg shadow-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <svg
