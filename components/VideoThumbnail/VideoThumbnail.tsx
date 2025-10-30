@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 interface VideoThumbnailProps {
@@ -14,15 +16,15 @@ const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ title, videoId }) => (
   >
     <div className="relative">
       <div className="rounded-lg overflow-hidden w-full" style={{ aspectRatio: "9/16" }}>
-        <img
-          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-          alt={title}
-          className="w-full h-full object-cover object-center transition"
-          onError={(e) => {
-            // Fallback to hqdefault if maxresdefault is not available
-            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-          }}
-        />
+        {/* Using a next/image would be better, but since we're using an img tag directly */}
+        {/* We'll use a pattern that doesn't require client-side event handlers */}
+        <picture>
+          <source srcSet={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} />
+          <img
+            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+            alt={title}
+            className="w-full h-full object-cover object-center transition"
+          />
         <div className="absolute inset-0 bg-black/40 rounded-lg shadow-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <svg
