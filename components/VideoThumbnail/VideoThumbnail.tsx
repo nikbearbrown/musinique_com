@@ -13,24 +13,30 @@ const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ title, videoId }) => (
     className="block group"
   >
     <div className="relative">
-      <img
-        src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-        alt={title}
-        className="rounded-lg w-full aspect-video object-cover transition"
-      />
-      <span className="absolute inset-0 rounded-lg bg-black/40 shadow-lg"></span>
-      <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <svg
-          width="56"
-          height="56"
-          viewBox="0 0 56 56"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.92)" />
-          <polygon points="22,18 22,38 40,28" fill="#111" />
-        </svg>
-      </span>
+      <div className="rounded-lg overflow-hidden w-full" style={{ aspectRatio: "9/16" }}>
+        <img
+          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+          alt={title}
+          className="w-full h-full object-cover object-center transition"
+          onError={(e) => {
+            // Fallback to hqdefault if maxresdefault is not available
+            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40 rounded-lg shadow-lg"></div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <svg
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.92)" />
+            <polygon points="22,18 22,38 40,28" fill="#111" />
+          </svg>
+        </div>
+      </div>
     </div>
     <div className="mt-2 font-semibold text-center">{title}</div>
   </a>
