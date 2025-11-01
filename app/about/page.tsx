@@ -36,7 +36,7 @@ export default function AboutPage() {
               <div className="relative w-full aspect-video">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-md"
-                  src="https://www.youtube.com/embed/GN7yQntWJHU?si=gTXWalKvsLDP8nbV"
+                  src="https://www.youtube.com/embed/gLz17e3-UHg?si=lafh2kuxPoKW1RVk"
                   title="Musinique Introduction"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
