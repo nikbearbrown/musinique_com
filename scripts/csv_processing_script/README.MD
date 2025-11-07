@@ -1,4 +1,4 @@
-# Spotify URL Validator
+# Spotify URL Validator (11/05/2025)
 
 A Python script that validates Spotify playlist and profile URLs from a CSV file using Playwright web automation with anti-bot detection measures.
 
