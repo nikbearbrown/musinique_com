@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Transform any text into soothing lullabies with Lullabize by Humanitarians AI",
 };
 
-export default function LullabizePage() {
+export default function Lullabize() {
   return (
     <>
       {/* Google tag (gtag.js) */}
@@ -208,6 +208,33 @@ And put it in the oven for baby and me.`}
                 <PrimaryButton href="https://chatgpt.com/g/g-68b5f1f612208191a735586516c0d264-lullabize">
                   Try Lullabize Now
                 </PrimaryButton>
+              </div>
+            </section>
+
+            {/* ===== LYRICAL LITERACY PROJECT SECTION ===== */}
+            <section className="p-6 bg-primary/5 rounded-lg border">
+              <h2 className="text-3xl font-bold mb-4">About Lyrical Literacy</h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p>
+                  Lyrical Literacy is a companion project to Lullabize that focuses on empowering youth through the transformative power of music and poetry. This pioneering initiative from Humanitarians AI harnesses artificial intelligence to enhance cognitive and language development through musical experiences that strengthen neural pathways and improve information retention.
+                </p>
+                
+                <p>
+                  While Lullabize specializes in creating soothing bedtime songs, Lyrical Literacy expands this approach to create educational content across various domains. The project includes several specialized programs:
+                </p>
+                
+                <ul className="grid md:grid-cols-2 gap-4 my-4">
+                  <li className="p-3 bg-muted/30 rounded-lg"><strong>Multilingual Melody:</strong> Personalized songs that facilitate language acquisition</li>
+                  <li className="p-3 bg-muted/30 rounded-lg"><strong>Rhythm & Recall:</strong> Memory enhancement through rhythmic patterns</li>
+                  <li className="p-3 bg-muted/30 rounded-lg"><strong>Therapeutic Tones:</strong> Music-based interventions for cognitive rehabilitation</li>
+                  <li className="p-3 bg-muted/30 rounded-lg"><strong>Educational Harmonies:</strong> Curriculum-aligned musical content</li>
+                </ul>
+                
+                <div className="flex justify-center mt-4">
+                  <SecondaryButton href="/lyrical-literacy">
+                    Explore Lyrical Literacy
+                  </SecondaryButton>
+                </div>
               </div>
             </section>
 
