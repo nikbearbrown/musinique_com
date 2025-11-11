@@ -43,7 +43,7 @@ export default function Spotify({
         width={width}
         height={height}
         frameBorder="0"
-        allowFullScreen=""
+        allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
