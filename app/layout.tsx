@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Inter } from "next/font/google"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
+import Spotify from "@/components/Spotify/Spotify"
 import { Analytics } from '@vercel/analytics/react'
 import "./globals.css"
 import { cn } from "@/lib/utils"
@@ -28,6 +29,11 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">{children}</main>
+            {/* Add Spotify component above the footer */}
+            <div className="container px-4 md:px-6 mx-auto py-8">
+              <h2 className="text-2xl font-bold mb-4 text-center">Featured Playlist</h2>
+              <Spotify />
+            </div>
             <Footer />
           </div>
         </ThemeProvider>
