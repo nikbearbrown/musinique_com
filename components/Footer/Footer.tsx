@@ -175,9 +175,10 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Resources</h3>
               <ul className="space-y-2">
-                <li><Link href="https://www.youtube.com/@Musinique" className="text-muted-foreground hover:text-foreground transition-colors">YouTube</Link></li>
-                <li><Link href="https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6" className="text-muted-foreground hover:text-foreground transition-colors">Spotify</Link></li>
                 <li><Link href="https://music.apple.com/us/artist/1779725275" className="text-muted-foreground hover:text-foreground transition-colors">Apple Music</Link></li>
+                <li><Link href="https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6" className="text-muted-foreground hover:text-foreground transition-colors">Spotify</Link></li>
+                <li><Link href="https://musinique.substack.com" className="text-muted-foreground hover:text-foreground transition-colors">Substack</Link></li>
+                <li><Link href="https://www.youtube.com/@Musinique" className="text-muted-foreground hover:text-foreground transition-colors">YouTube</Link></li>
               </ul>
             </div>
 
@@ -228,16 +229,11 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             <strong>Contact Us:</strong> Musinique | <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
           </p>
-          {/* <p className="mt-2 text-sm text-muted-foreground">
-            Support our mission by <Link href="/donate" className="text-primary hover:underline">donating</Link> today.
-            100% of all donations support our direct operational costs, including program expenses, legal fees, and staff salaries to advance our mission.
-          </p> */}
         </div>
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
           &copy; 2024 - {currentYear} Musinique. All rights reserved.
-          {/* | <Link href="/compliance" className="text-primary hover:underline">Ad Grants Compliance</Link> */}
         </div>
       </div>
     </footer>
