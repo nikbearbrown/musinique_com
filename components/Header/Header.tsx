@@ -41,11 +41,6 @@ export default function Header() {
 
   const navigation = [
     { name: "About", href: "/about" },
-    // { name: "AI for Good", href: "/ai-for-good" },
-    // { name: "Lyrical Literacy", href: "/lyrical-literacy" },
-    // { name: "Botspeak", href: "/botspeak" },
-    // { name: "About Us", href: "/about" },
-    // { name: "Contact Us", href: "/contact" },
   ]
 
   return (
@@ -83,9 +78,9 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="https://www.youtube.com/@Musinique">
+            <Link href="https://music.apple.com/us/artist/1779725275">
               <button className={cn(baseButtonStyles, headerButtonStyles)}>
-                Youtube
+                Apple Music
               </button>
             </Link>
             <Link href="https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6">
@@ -93,9 +88,14 @@ export default function Header() {
                 Spotify
               </button>
             </Link>
-            <Link href="https://music.apple.com/us/artist/1779725275">
+            <Link href="https://musinique.substack.com">
               <button className={cn(baseButtonStyles, headerButtonStyles)}>
-                Apple Music
+                Substack
+              </button>
+            </Link>
+            <Link href="https://www.youtube.com/@Musinique">
+              <button className={cn(baseButtonStyles, headerButtonStyles)}>
+                Youtube
               </button>
             </Link>
           </div>
@@ -133,11 +133,17 @@ export default function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-4 mt-4">
-                <Link href="https://www.youtube.com/@Musinique" className="text-base font-medium">
-                  YouTube
+                <Link href="https://music.apple.com/us/artist/1779725275" className="text-base font-medium">
+                  Apple Music
                 </Link>
                 <Link href="https://open.spotify.com/artist/3cj3R4pDpYQHaWx0MM2vFV" className="text-base font-medium">
                   Spotify
+                </Link>
+                <Link href="https://musinique.substack.com" className="text-base font-medium">
+                  Substack
+                </Link>
+                <Link href="https://www.youtube.com/@Musinique" className="text-base font-medium">
+                  YouTube
                 </Link>
                 <Link href="/donate" className="mt-2">
                   <button className={cn(baseButtonStyles, headerButtonStyles, "w-full")}>
