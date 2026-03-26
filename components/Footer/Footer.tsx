@@ -1,17 +1,16 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import Image from "next/image"
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
-import ThemeToggle from "@/components/ThemeToggle"
+import Link from 'next/link'
+import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  // Avoid hydration mismatch by only rendering after mount
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -41,101 +40,39 @@ export default function Footer() {
               </p>
               <div className="mt-6 flex space-x-4 items-center">
                 <Link href="https://www.youtube.com/@Musinique" className="text-sm hover:text-primary transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="inline-block"
-                  >
-                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                    <path d="m10 15 5-3-5-3z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" /></svg>
                 </Link>
                 <Link href="https://open.spotify.com/artist/0hSpFCJodAYMP2cWK72zI6" className="text-sm hover:text-primary transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="inline-block"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M8 14.5c1.5 1 4 1 5.5 0" />
-                    <path d="M8 11c2 1 5 1 7 0" />
-                    <path d="M8.5 7.5c2.5 1 6.5 1 9 0" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><circle cx="12" cy="12" r="10" /><path d="M8 14.5c1.5 1 4 1 5.5 0" /><path d="M8 11c2 1 5 1 7 0" /><path d="M8.5 7.5c2.5 1 6.5 1 9 0" /></svg>
                 </Link>
                 <Link href="https://www.linkedin.com/company/105696953/" className="text-sm hover:text-primary transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="inline-block"
-                  >
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                 </Link>
                 <Link href="https://x.com/musinique" className="text-sm hover:text-primary transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="inline-block"
-                  >
-                    <path d="M4 4l11.733 16h4.267l-11.733-16z" />
-                    <path d="M4 20l6.768-6.768" />
-                    <path d="M12.299 13.299l7.701-9.299" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><path d="M4 4l11.733 16h4.267l-11.733-16z" /><path d="M4 20l6.768-6.768" /><path d="M12.299 13.299l7.701-9.299" /></svg>
                 </Link>
                 <Link href="mailto:bear@bearbrown.co" className="text-sm hover:text-primary transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="inline-block"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
                 </Link>
                 <ThemeToggle />
               </div>
             </div>
           </div>
 
-          {/* Links Sections - First Row */}
+          {/* Links Sections */}
           <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-6 gap-8">
+            {/* Platform */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
+                <li><Link href="/books" className="text-muted-foreground hover:text-foreground transition-colors">Books</Link></li>
+                <li><Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">Tools</Link></li>
+                <li><Link href="/notes" className="text-muted-foreground hover:text-foreground transition-colors">Notes</Link></li>
+                <li><Link href="/dev" className="text-muted-foreground hover:text-foreground transition-colors">Dev</Link></li>
+              </ul>
+            </div>
+
             {/* Company */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Company</h3>
@@ -143,16 +80,6 @@ export default function Footer() {
                 <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
               </ul>
             </div>
-
-            {/* Projects */}
-            <div className="space-y-4">
-             <h3 className="text-lg font-semibold">Projects</h3>
-             <ul className="space-y-2">
-               <li><Link href="/projects" className="text-muted-foreground hover:text-foreground transition-colors font-medium">All Projects</Link></li>
-               <li><Link href="/indie" className="text-muted-foreground hover:text-foreground transition-colors">Indie Analytics Engines</Link></li>
-              <li><Link href="/indie" className="text-muted-foreground hover:text-foreground transition-colors">Musinique Song Writer</Link></li>       
-             </ul>
-           </div> 
 
             {/* Support Artists */}
             <div className="space-y-4">
@@ -182,6 +109,14 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* Connect */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Connect</h3>
+              <ul className="space-y-2">
+                <li><a href="https://github.com/nikbearbrown/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a></li>
+                <li><a href="https://www.bearbrown.co/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Bear Brown &amp; Co</a></li>
+              </ul>
+            </div>
 
             {/* Legal & Privacy */}
             <div className="space-y-4">
@@ -190,7 +125,6 @@ export default function Footer() {
                 <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/privacy#cookies" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</Link></li>
                 <li><Link href="/terms-of-service" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
-                {/* <li><Link href="/compliance" className="text-muted-foreground hover:text-foreground transition-colors">Ad Grants Compliance</Link></li> */}
               </ul>
             </div>
           </div>
@@ -224,7 +158,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Information & Transparency */}
+        {/* Contact Information */}
         <div className="mt-6 text-center">
           <p className="text-sm text-muted-foreground">
             <strong>Contact Us:</strong> Musinique | <a href="mailto:bear@bearbrown.co" className="text-primary hover:underline">bear@bearbrown.co</a>
@@ -233,7 +167,13 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          &copy; 2024 - {currentYear} Musinique. All rights reserved.
+          <p>&copy; 2024 - {currentYear} Musinique. All rights reserved.</p>
+          <p className="mt-2">
+            Built by{' '}
+            <a href="https://www.bearbrown.co/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Nik Bear Brown</a>
+            {' · '}
+            <a href="https://www.bearbrown.co/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">bearbrown.co</a>
+          </p>
         </div>
       </div>
     </footer>
