@@ -2,8 +2,25 @@ import PrimaryButton from "@/components/ui/primary-button"
 import SecondaryButton from "@/components/ui/secondary-button"
 import { Book, Code, Music, MessageSquare, Radio, Mic2, Flame, Users } from "lucide-react"
 import Link from "next/link"
+import { sql } from "@/lib/db"
 
-export default function Home() {
+async function getRandomHeroVideo(): Promise<{ youtube_id: string; title: string } | null> {
+  try {
+    const rows = await sql`
+      SELECT youtube_id, title FROM videos
+      WHERE published = true
+      ORDER BY RANDOM() LIMIT 1
+    `
+    return rows[0] ? { youtube_id: rows[0].youtube_id as string, title: rows[0].title as string } : null
+  } catch {
+    return null
+  }
+}
+
+export const revalidate = 60
+
+export default async function Home() {
+  const heroVideo = await getRandomHeroVideo()
   return (
     <div className="flex flex-col w-full">
 
@@ -33,8 +50,8 @@ export default function Home() {
               <div className="relative w-full aspect-video">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-md"
-                  src="https://www.youtube.com/embed/edxXeLcW8p0?si=dXLCFHHS_8DKmU72"
-                  title="Musinique Introduction"
+                  src={`https://www.youtube.com/embed/${heroVideo?.youtube_id ?? 'edxXeLcW8p0'}?si=dXLCFHHS_8DKmU72`}
+                  title={heroVideo?.title ?? 'Musinique Introduction'}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
