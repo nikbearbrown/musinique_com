@@ -10,12 +10,9 @@ import ThemeToggle from '@/components/ThemeToggle'
 import { useTheme } from 'next-themes'
 
 const NAV_ITEMS = [
-  { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
-  { name: 'Books', href: '/books' },
-  { name: 'Dev', href: '/dev' },
   { name: 'Notes', href: '/notes' },
-  { name: 'Tools', href: '/tools' },
+  { name: 'Videos', href: '/videos' },
 ]
 
 const SOCIAL_LINKS = [
