@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Strategic Architecture of Music Promotion in 2026</title>
+  <meta name="description" content="A professional-level analysis of music promotion strategy in 2026, covering algorithmic optimization on Spotify and Apple Music, short-form video discovery, AI-driven paid media, and direct-to-fan community infrastructure. Essential reading for independent artists, music executives, and digital marketers navigating the post-digital landscape.">
+  <meta name="keywords" content="music promotion 2026, Spotify algorithm, independent artist marketing, TikTok music strategy, direct-to-fan, music analytics, short-form video, Meta ads music, Discord artist community, DSP discoverability">
+  <meta name="date" content="2026-03-30">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bb-1: #1a0a00;
+      --bb-2: #8B3A0F;
+      --bb-3: #C0392B;
+      --bb-4: #E8A020;
+      --bb-5: #D4500A;
+      --bb-6: #B8860B;
+      --bb-7: #C8A96E;
+      --bb-8: #F0E6D0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bb-8);
+      color: var(--bb-1);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--bb-8);
+      border-bottom: 1px solid var(--bb-7);
+      z-index: 100;
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+    }
+    .nav-brand {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-5);
+      text-decoration: none;
+    }
+    .nav-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bb-6);
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ARTICLE HEADER */
+    .article-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid var(--bb-7);
+    }
+    .article-dateline {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-6);
+      margin-bottom: 16px;
+    }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--bb-2);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .article-deck {
+      font-size: 1.1rem;
+      color: var(--bb-1);
+      line-height: 1.6;
+      opacity: 0.85;
+      font-weight: 400;
+      border-left: 3px solid var(--bb-4);
+      padding-left: 16px;
+    }
+
+    /* TOC */
+    .toc {
+      background: rgba(200, 169, 110, 0.15);
+      border: 1px solid var(--bb-7);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-5);
+      margin-bottom: 12px;
+    }
+    .toc ol {
+      padding-left: 1.4em;
+      color: var(--bb-2);
+      font-size: 0.92em;
+      line-height: 2;
+    }
+    .toc a {
+      color: var(--bb-2);
+      text-decoration: none;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    /* SECTIONS */
+    section { margin-bottom: 56px; }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--bb-2);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--bb-7);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--bb-5);
+      margin: 28px 0 12px;
+    }
+
+    p { margin-bottom: 18px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* BLOCKQUOTE — key stat */
+    blockquote {
+      border-left: 4px solid var(--bb-4);
+      background: rgba(232, 160, 32, 0.08);
+      padding: 18px 22px;
+      margin: 28px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--bb-1);
+      margin: 0;
+    }
+    blockquote cite {
+      display: block;
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bb-6);
+      margin-top: 8px;
+      font-style: normal;
+    }
+
+    /* ASIDE — warning/caveat */
+    aside {
+      border-left: 4px solid var(--bb-3);
+      background: rgba(192, 57, 43, 0.06);
+      padding: 16px 20px;
+      margin: 28px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    aside .aside-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-3);
+      margin-bottom: 6px;
+    }
+    aside p {
+      font-size: 0.95rem;
+      color: var(--bb-1);
+      margin: 0;
+    }
+
+    /* DATA TABLE */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0 32px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    thead tr {
+      background: var(--bb-2);
+      color: var(--bb-8);
+    }
+    thead th {
+      text-align: left;
+      padding: 10px 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) { background: rgba(200,169,110,0.12); }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--bb-7);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    tbody td strong {
+      color: var(--bb-2);
+      font-weight: 600;
+    }
+
+    /* PHASE BLOCKS */
+    .phase-block {
+      border: 1px solid var(--bb-7);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .phase-header {
+      background: var(--bb-2);
+      color: var(--bb-8);
+      padding: 10px 18px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+    .phase-body {
+      padding: 16px 18px;
+      background: rgba(200,169,110,0.08);
+    }
+    .phase-body ul {
+      padding-left: 1.4em;
+      font-size: 0.95em;
+      line-height: 1.9;
+    }
+    .phase-body ul li { margin-bottom: 2px; }
+
+    /* FOOTER */
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 24px 40px;
+      border-top: 1px solid var(--bb-7);
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bb-6);
+    }
+    footer a { color: var(--bb-5); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.5rem; }
+      main { padding: 32px 16px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="https://www.bearbrown.co">bearbrown.co</a>
+    <span class="nav-label">Research Report · March 30, 2026</span>
+  </div>
+</nav>
+
+<main>
+
+  <header class="article-header">
+    <p class="article-dateline">March 30, 2026 &nbsp;·&nbsp; Music Industry Strategy</p>
+    <h1>The Strategic Architecture of Music Promotion in 2026</h1>
+    <p class="article-deck">Algorithmic optimization, community engineering, and multi-channel digital marketing have replaced reach-based tactics as the defining disciplines of modern music promotion.</p>
+  </header>
+
+  <div class="toc">
+    <p class="toc-label">Contents</p>
+    <ol>
+      <li><a href="#identity">Artist Identity and World-Building</a></li>
+      <li><a href="#dsp">DSP Algorithm Mechanics</a></li>
+      <li><a href="#shortform">Short-Form Video Discovery</a></li>
+      <li><a href="#paid">Paid Media Optimization</a></li>
+      <li><a href="#d2f">Direct-to-Fan Infrastructure</a></li>
+      <li><a href="#analytics">Music Data Analytics</a></li>
+      <li><a href="#boston">Geographic Assets: The Boston Circuit</a></li>
+      <li><a href="#workflow">The 30-Day Release Workflow</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section id="identity">
+    <h2>Artist Identity and World-Building</h2>
+    <p>The 2026 music industry has shifted decisively from broad-spectrum visibility to high-intent engagement. Platform saturation and the proliferation of AI-generated content have rendered traditional "spray and pray" marketing obsolete. Artists must now function as world-builders who synthesize visuals, sonics, and narrative into a coherent, immersive brand experience.</p>
+    <p>Audiences have developed high sensitivity to inauthentic presentation. Authenticity has become the primary currency, and a cohesive brand serves as a cognitive anchor in an environment of constant content decay. When the visual identity of a TikTok snippet matches an album's artwork on Spotify, it reinforces recognition and measurably increases library save rates.</p>
+
+    <blockquote>
+      <p>"Fans now demand radical authenticity and conceptual cohesion, forcing artists to act as world-builders who synthesize visuals, sonics, and narratives into a singular, immersive experience."</p>
+      <cite>SpaceLoud — Independent Artist's Guide to Music Promotion in 2026</cite>
+    </blockquote>
+
+    <h3>AI as a Production Assistant</h3>
+    <p>AI tools are now used not to replace artistic voice but to manage the logistical burden of multi-platform consistency. Successful artists use AI to automate "filler" content — captions, visual concepts, audience data analysis — while reserving human effort for high-impact storytelling and genuine community interaction.</p>
+
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Identity Component</th>
+            <th>2026 Strategic Application</th>
+            <th>Algorithmic Relevance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sonic Signature</strong></td><td>Consistent production quality and genre-defining instrumentation</td><td>Informs Spotify NLP categorization</td></tr>
+          <tr><td><strong>Visual Narrative</strong></td><td>Unified aesthetic across Canvas videos, Motion Art, social headers</td><td>Reduces skip rates on DSPs</td></tr>
+          <tr><td><strong>Emotional Hook</strong></td><td>Storytelling centered on vulnerability and the "why" behind the song</td><td>Triggers library adds and favorites</td></tr>
+          <tr><td><strong>Direct Persona</strong></td><td>Active community engagement and transparent communication</td><td>Builds superfan segments for Discovery Station</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="dsp">
+    <h2>DSP Algorithm Mechanics</h2>
+    <p>Spotify and Apple Music have refined their recommendation engines to prioritize behavioral signals over raw play counts. The transition toward "algo-torial" systems means human editorial opinion and machine-learning data are now inextricably linked.</p>
+
+    <h3>Spotify's Signal Hierarchy</h3>
+    <p>Spotify's 2026 algorithm operates on three interlocking systems: collaborative filtering (comparing user behavior clusters), audio analysis (tempo, key, mood), and Natural Language Processing that scans the wider web to understand cultural context.</p>
+
+    <blockquote>
+      <p>A track with a Save Rate exceeding 20% is considered high-performing and is likely to trigger algorithmic playlist placement on Discover Weekly and Release Radar.</p>
+      <cite>Chartlex — How Spotify's Algorithm Works in 2026</cite>
+    </blockquote>
+
+    <aside>
+      <p class="aside-label">⚠ Algorithm Killer</p>
+      <p>A high Skip Rate in the first 30 seconds is the single most damaging signal. The system interprets early skips as a negative quality indicator and will cease recommending the track to new users.</p>
+    </aside>
+
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Spotify Metric</th>
+            <th>Priority</th>
+            <th>Strategic Implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Library Saves</strong></td><td>High</td><td>Strongest indicator of long-term affinity and re-listen intent</td></tr>
+          <tr><td><strong>Repeat Listen Ratio</strong></td><td>High</td><td>Ideal ratio is above 2.0; measures track "stickiness"</td></tr>
+          <tr><td><strong>Completion Rate</strong></td><td>Medium</td><td>Passing 30 seconds counts as a stream; full listens boost authority</td></tr>
+          <tr><td><strong>User Playlist Adds</strong></td><td>Medium</td><td>Signals mood/activity context fit to the recommendation engine</td></tr>
+          <tr><td><strong>Follower Growth</strong></td><td>Medium</td><td>Every new follower auto-receives the next release in Release Radar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Apple Music's Algo-torial Strategy</h3>
+    <p>Apple Music manages over 30,000 global playlists through a combined editorial and algorithmic system. High-intent actions — Favorites and Library Adds — drive the algorithmic surfaces "Listen Now" and "Discovery Station." A unique differentiator is Shazam integration: high Shazam velocity acts as an early-warning signal for the editorial team, indicating a track is being discovered organically in the wild, often fueling inclusion in Apple's Viral playlists.</p>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="shortform">
+    <h2>Short-Form Video as the Primary Discovery Engine</h2>
+    <p>In 2026, the discovery phase of the fan journey takes place almost exclusively on TikTok, Instagram Reels, and YouTube Shorts. These platforms have evolved into sound-driven search engines where a song's hook must be packaged into engaging, relatable visual contexts.</p>
+
+    <h3>The Psychology of the Hook</h3>
+    <p>The first three seconds of a vertical video are decisive. Successful creators use "pattern interruption" — unexpected visual movements, dramatic zooms, or provocative text overlays — to arrest the scroll. Text hooks such as "the lyric I was scared to release" create immediate curiosity and emotional investment before the music is even heard.</p>
+
+    <p>Effective video archetypes in 2026 include contextual storytelling (the emotional origin of the song), raw performance footage emphasizing human talent, UGC prompts that invite fans to use a sound snippet for their own videos, and genuine reaction clips to milestones.</p>
+
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Core Strength</th>
+            <th>Content Optimization</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>TikTok</strong></td><td>Rapid discovery and sound-based trends</td><td>High-energy, trend-aligned, UGC-friendly snippets</td></tr>
+          <tr><td><strong>Instagram Reels</strong></td><td>Community engagement and retention</td><td>Short 7–15s high-impact loops that encourage re-watches</td></tr>
+          <tr><td><strong>YouTube Shorts</strong></td><td>Gateway to long-form and channel subscribers</td><td>Teasers for music videos or behind-the-scenes documentaries</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside>
+      <p class="aside-label">Consistency over volume</p>
+      <p>The optimal posting cadence is 3 to 7 posts per week — a frequency that is realistic to sustain. A schedule that collapses after two weeks causes algorithmic penalties that take months to recover from.</p>
+    </aside>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="paid">
+    <h2>Paid Media Optimization</h2>
+    <p>Paid advertising has shifted from manual interest-based targeting to AI-driven optimization. Meta's Advantage+ system and equivalent tools on TikTok and Google have transformed the advertiser's role from media buyer to content strategist: if the creative asset is weak, no targeting sophistication can compensate.</p>
+
+    <h3>Meta Ads: Go Broad</h3>
+    <p>Manually selecting interest categories like genre names or festival audiences is now considered counterproductive. Meta's AI reads video frames and listens to audio to identify likely listeners without manual intervention. The current best practice is to supply the creative asset and basic geographic parameters, then allow the algorithm to optimize for conversions.</p>
+
+    <blockquote>
+      <p>Sending ad traffic directly to Spotify creates "data blindness" — the advertiser loses all tracking capability the moment a user leaves the social app. Conversion bridge tools like Hypeddit or ToneDen are essential for building actionable lookalike audiences.</p>
+      <cite>ArtistRack — Do Meta Ads Still Work for Music in 2026?</cite>
+    </blockquote>
+
+    <h3>Strategic Budgeting Tiers</h3>
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Budget Tier</th>
+            <th>Investment Level</th>
+            <th>Strategic Objective</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Profile Warming</strong></td><td>$5–10 / day</td><td>Maintaining baseline visibility; gaining new followers</td></tr>
+          <tr><td><strong>Launch Campaign</strong></td><td>$20–50 / day</td><td>Driving high-intent traffic to a new single to trigger algorithms</td></tr>
+          <tr><td><strong>Viral Scaling</strong></td><td>$100+ / day</td><td>Aggressively amplifying a track already gaining organic traction</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="d2f">
+    <h2>Direct-to-Fan Infrastructure</h2>
+    <p>As platform algorithms grow increasingly volatile, owned audience data has reached its historical peak in value. The most resilient artists of 2026 have built D2F infrastructure that allows direct communication with fans entirely outside the influence of third-party platforms.</p>
+
+    <h3>Discord as Digital Backstage</h3>
+    <p>Discord provides a direct communication channel unmediated by algorithmic feed filtering. Successful servers feature distinct channels for announcements, music previews, and fan content, and host high-touch events including virtual listening parties, exclusive demo previews, and fan-collaborative merchandise ideation. Discord's Patreon integration enables tiered access models where fans pay for private channels and early ticket access.</p>
+
+    <h3>Patreon and the 1% Rule</h3>
+
+    <blockquote>
+      <p>Research indicates that roughly 1% of an artist's truly engaged followers will convert to paying patrons — making depth-of-relationship far more valuable than raw follower count for membership campaigns.</p>
+      <cite>De Novo Agency — Making Money on Patreon as a Musician</cite>
+    </blockquote>
+
+    <p>For small but loyal fanbases, the strategy favors high-value tiers ($25–$50) offering intimate access over low-cost tiers requiring massive volume. A structure of four to five tiers provides sufficient choice without decision fatigue. Consistent monthly posting is the strongest single predictor of patron retention.</p>
+
+    <h3>SMS Marketing</h3>
+    <p>With open rates near 98%, SMS is the most effective channel for high-urgency announcements: release day alerts, limited merch drops, and tour date announcements. Geographic segmentation prevents irrelevant messages, and every SMS should contain a single, clear call to action. Optimal send window is 9 AM to 5 PM local time.</p>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section id="analytics">
+    <h2>Music Data Analytics and Competitive Intelligence</h2>
+    <p>Interpreting cross-platform data is now a baseline professional competency, not a niche skill. Artists and label teams employ layered analytics stacks that combine first-party platform dashboards with specialized aggregators.</p>
+
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Primary Strength</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Spotify / Apple for Artists</strong></td><td>First-party stream, save, and demographic data</td><td>All artists — the non-negotiable baseline</td></tr>
+          <tr><td><strong>Soundcharts</strong></td><td>Global radio airplay tracking (2,400+ stations) and press mentions</td><td>Publicists and international teams</td></tr>
+          <tr><td><strong>Chartmetric</strong></td><td>Deep historical data and competitive benchmarking</td><td>Established management and labels</td></tr>
+          <tr><td><strong>Viberate</strong></td><td>Real-time playlist placement and follower spike alerts</td><td>Growing independent artists</td></tr>
+          <tr><td><strong>Songstats</strong></td><td>Real-time breakout moment notifications across platforms</td><td>Artists who need to react quickly to momentum spikes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Data-Driven Pivots in Practice</h3>
+    <p>Analytics in 2026 are used predictively, not just retrospectively. Key applications include: adjusting video edit points when Studio drop-off data reveals listener exit patterns; localizing ad spend when Shazam spikes flag a specific city for live booking; and refining metadata descriptors when playlist placement data reveals a mismatch between artist self-description and actual listener behavior.</p>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section id="boston">
+    <h2>Geographic Strategic Assets: The Boston Circuit</h2>
+    <p>While digital promotion operates globally, local infrastructure can ignite viral moments that algorithms amplify. Boston's independent music ecosystem remains one of the most organized in the United States.</p>
+
+    <h3>Radio and Press</h3>
+    <p>Boston's college radio network carries significant cultural weight with DSP editorial teams. WERS 88.9 FM (Emerson College) features local artists through programs like "Wicked Local Wednesday." WBCA 102.9 FM focuses exclusively on Massachusetts-based artists across all genres. The online publication Sound of Boston provides regional editorial coverage that strengthens playlist pitching credibility.</p>
+
+    <h3>The Venue Ladder</h3>
+    <div class="data-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Venue</th>
+            <th>Capacity</th>
+            <th>Strategic Utility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Deep Cuts</strong></td><td>240</td><td>Intimate debut shows; ideal for building core community</td></tr>
+          <tr><td><strong>Brighton Music Hall</strong></td><td>500</td><td>Professional stepping stone for indie and alternative touring acts</td></tr>
+          <tr><td><strong>The Sinclair</strong></td><td>525</td><td>High-prestige Harvard Square anchor; excellent for live video capture</td></tr>
+          <tr><td><strong>Paradise Rock Club</strong></td><td>933</td><td>Hub of the college music scene; essential for the student demographic</td></tr>
+          <tr><td><strong>MGM Music Hall</strong></td><td>5,000</td><td>Mid-sized arena at Fenway; reserved for breakout moments</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section id="workflow">
+    <h2>The 30-Day Release Workflow</h2>
+    <p>The professional standard in 2026 treats release day as the midpoint of a month-long campaign, not the finish line. Algorithmic momentum must be built before the release and sustained well after it.</p>
+
+    <div class="phase-block">
+      <div class="phase-header">Phase 1 — Pre-Release · Weeks 4 to 1</div>
+      <div class="phase-body">
+        <ul>
+          <li>Batch-produce 20–30 short-form video clips (hooks, acoustic takes, studio b-roll)</li>
+          <li>Produce one high-value "anchor" video to carry the campaign</li>
+          <li>Submit metadata to Spotify for Artists and Apple Music Connect 14–21 days before release</li>
+          <li>Launch pre-save campaign via HearNow to convert early interest into Day 1 library adds</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header">Phase 2 — Release and Amplification · Day 1 to Day 14</div>
+      <div class="phase-body">
+        <ul>
+          <li>Launch 5–7 strongest pre-batched clips across TikTok, Reels, and Shorts within the first 48 hours</li>
+          <li>Activate Meta and TikTok paid campaigns focused on high-intent landing page clicks</li>
+          <li>Mobilize SMS lists and Discord server to drive immediate saves and repeat listens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header">Phase 3 — Evergreen Sustain · Day 15 to Day 30+</div>
+      <div class="phase-body">
+        <ul>
+          <li>Analyze Spotify for Artists data to identify skip patterns and adjust promotional focus</li>
+          <li>Repost, stitch, and duet fan-generated content to signal cultural relevance to algorithms</li>
+          <li>Begin preparation for the next release (5–8 weeks out) to maintain the Release Radar flywheel</li>
+        </ul>
+      </div>
+    </div>
+
+    <blockquote>
+      <p>Advertising spend functions as gasoline on a fire — it amplifies what is already working organically. It cannot manufacture a connection that doesn't exist.</p>
+      <cite>ArtistRack — Do Meta Ads Still Work for Music in 2026?</cite>
+    </blockquote>
+
+    <aside>
+      <p class="aside-label">Core Principle</p>
+      <p>The most effective promotion of this era prioritizes retention over reach, depth over breadth, and authentic connection over passive consumption. Platform algorithms are a means of distribution — they are not a substitute for a genuine fan relationship.</p>
+    </aside>
+  </section>
+
+</main>
+
+<footer>
+  Built with <a href="https://www.bearbrown.co">bearbrown.co</a> · AI tools for educators, creators &amp; founders
+</footer>
+
+</body>
+</html>

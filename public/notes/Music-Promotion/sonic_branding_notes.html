@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Strategic Evolution of Auditory Identity</title>
+  <meta name="description" content="A comprehensive research report on music and sonic branding best practices for the modern multisensory era. Synthesizes neuroscience, behavioral research, and emerging technology trends through 2026 for both corporate brands and independent musical artists.">
+  <meta name="keywords" content="sonic branding, audio branding, music marketing, brand identity, sound design, artist branding, streaming algorithms, retail soundscapes, AI music, multisensory marketing">
+  <meta name="date" content="2026-03-30">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bb-1: #1a0a00;
+      --bb-2: #8B3A0F;
+      --bb-3: #C0392B;
+      --bb-4: #E8A020;
+      --bb-5: #D4500A;
+      --bb-6: #B8860B;
+      --bb-7: #C8A96E;
+      --bb-8: #F0E6D0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bb-8);
+      color: var(--bb-1);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bb-1);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    nav a {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--bb-7);
+      text-decoration: none;
+    }
+    nav a:hover { color: var(--bb-4); }
+    nav .sep { color: var(--bb-6); font-size: 11px; }
+    nav .badge {
+      margin-left: auto;
+      background: var(--bb-2);
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ARTICLE HEADER */
+    .article-header {
+      border-bottom: 2px solid var(--bb-7);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+    .datestamp {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--bb-6);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--bb-2);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .deck {
+      font-size: 1.1em;
+      color: var(--bb-1);
+      font-weight: 400;
+      line-height: 1.6;
+      border-left: 3px solid var(--bb-4);
+      padding-left: 18px;
+    }
+
+    /* HEADINGS */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--bb-2);
+      margin: 52px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--bb-7);
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--bb-5);
+      margin: 32px 0 12px;
+      font-family: 'Courier New', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* BODY TEXT */
+    p { margin-bottom: 20px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* PULL QUOTE / KEY FINDING */
+    blockquote {
+      border-left: 4px solid var(--bb-4);
+      background: rgba(232,160,32,0.08);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: var(--bb-1);
+      margin: 0;
+      line-height: 1.6;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-6);
+      font-style: normal;
+    }
+
+    /* ASIDE / WARNING / CAVEAT */
+    aside {
+      border-left: 4px solid var(--bb-3);
+      background: rgba(192,57,43,0.06);
+      padding: 18px 22px;
+      margin: 28px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    aside .aside-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--bb-3);
+      margin-bottom: 8px;
+    }
+    aside p { font-size: 0.95em; color: var(--bb-1); margin: 0; }
+
+    /* DATA TABLE */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 28px 0;
+      border: 1px solid var(--bb-7);
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88em;
+    }
+    thead tr {
+      background: var(--bb-2);
+      color: #fff;
+    }
+    thead th {
+      padding: 11px 14px;
+      text-align: left;
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    tbody tr { border-bottom: 1px solid var(--bb-7); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:nth-child(even) { background: rgba(200,169,110,0.12); }
+    td {
+      padding: 10px 14px;
+      color: var(--bb-1);
+      vertical-align: top;
+    }
+    td strong { color: var(--bb-2); }
+    .table-source {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: var(--bb-6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 6px;
+    }
+
+    /* NUMBERED LIST */
+    ol.body-list {
+      padding-left: 1.4em;
+      margin: 16px 0 24px;
+    }
+    ol.body-list li { margin-bottom: 10px; }
+
+    /* SECTION DIVIDER */
+    hr {
+      border: none;
+      border-top: 1px solid var(--bb-7);
+      margin: 48px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--bb-7);
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--bb-6);
+    }
+    footer a { color: var(--bb-5); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px 60px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://www.bearbrown.co">bearbrown.co</a>
+  <span class="sep">/</span>
+  <a href="#">Research</a>
+  <span class="badge">Report</span>
+</nav>
+
+<div class="container">
+
+  <header class="article-header">
+    <p class="datestamp">March 30, 2026 &nbsp;·&nbsp; Research Report</p>
+    <h1>The Strategic Evolution of Auditory Identity</h1>
+    <p class="deck">Best practices in music and sonic branding for the modern multisensory era — synthesizing neuroscience, behavioral research, and emerging technology for both corporate brands and independent artists.</p>
+  </header>
+
+  <!-- SECTION 1 -->
+  <h2>The Neuropsychological Foundations of Sound</h2>
+
+  <p>The efficacy of sonic branding is rooted in the intrinsic biological mechanisms of the human brain. Auditory signals reach the brain's primary processing centers in approximately 8 to 10 milliseconds — two to four times faster than visual stimuli, which require 20 to 40 milliseconds. This speed advantage allows sonic logos to establish recognition before a consumer has consciously registered a visual advertisement, bypassing cognitive filters to target the limbic system directly.</p>
+
+  <blockquote>
+    <p>Advertisements incorporating strong sonic brand cues have been shown to be 8.53 times more effective than those relying solely on visual assets. Brands with well-developed sonic identities achieve 76% higher brand power and a 138% increase in perceived advertising strength.</p>
+    <cite>Source: IPSOS / Kantar BrandZ research synthesis</cite>
+  </blockquote>
+
+  <p>Musical memory engages the phonological loop — a component of working memory that retains acoustic information with unusually high fidelity over long periods. This "Memory Paradox" is the neurological engine behind sonic branding's outsized commercial impact.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Neural Processing Metric</th>
+          <th>Auditory Stimulus</th>
+          <th>Visual Stimulus</th>
+          <th>Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Brain Reach Speed</td><td><strong>8–10 ms</strong></td><td>20–40 ms</td><td>2×–4× Faster</td></tr>
+        <tr><td>Information Retention</td><td><strong>High (Phonological Loop)</strong></td><td>Lower (Visual Decay)</td><td>10×–20× Advantage</td></tr>
+        <tr><td>Ad Effectiveness</td><td><strong>8.53× Multiplier</strong></td><td>Baseline</td><td>+753%</td></tr>
+        <tr><td>Brand Power Lift</td><td><strong>76% Increase</strong></td><td>Baseline</td><td>Significant Alpha</td></tr>
+        <tr><td>Purchase Intent</td><td><strong>86% Correlation</strong></td><td>Variable</td><td>High Conversion</td></tr>
+      </tbody>
+    </table>
+    <p class="table-source">Source: IPSOS / Kantar BrandZ</p>
+  </div>
+
+  <p>The emotional influence of sound extends directly to behavioral outcomes. Fast-tempo music in retail spaces has been documented to increase heart rates and stimulate impulsive purchasing, while slower tempos encourage dwell time and higher transaction values in luxury environments. This "atmospheric strategy" leverages the brain's dopamine release in response to familiar brand sounds, creating a reward cycle that fosters long-term consumer loyalty.</p>
+
+  <!-- SECTION 2 -->
+  <h2>Audio Branding vs. Sonic Branding: A Critical Distinction</h2>
+
+  <p><strong>Audio branding</strong> represents the full sensory architecture of a brand — the rules, personality, and comprehensive sound environment that supports its promise. It encompasses music selection for advertisements, voice-over tone and pace, retail soundscapes, and even on-hold telephony.</p>
+
+  <p><strong>Sonic branding</strong> is the distilled execution: the creation of a sonic logo or audio mnemonic — a short, distinctive sound designed for high-frequency, low-duration touchpoints such as app notifications, product startup tones, or payment confirmations.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Audio Branding (Architecture)</th>
+          <th>Sonic Branding (Execution)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Scope</td><td>Comprehensive sound system</td><td>Focused audio "signature"</td></tr>
+        <tr><td>Duration</td><td>Full-length tracks to ambient loops</td><td>0.5 to 5 seconds</td></tr>
+        <tr><td>Primary Function</td><td>Establish mood, energy, voice</td><td>Build instant recall and trust</td></tr>
+        <tr><td>Touchpoints</td><td>Podcasts, retail, social content</td><td>Apps, payments, ad bookends</td></tr>
+        <tr><td>Dev Timeline</td><td>4–12 weeks for full strategy</td><td>2–4 weeks for logo asset</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <aside>
+    <p class="aside-label">⚠ Common Mistake</p>
+    <p>Most brands confuse a jingle (a recognizable melody used in advertising) with a sonic logo (a strategic asset designed for ubiquitous, low-duration touchpoints). The two serve fundamentally different functions and should be developed separately.</p>
+  </aside>
+
+  <!-- SECTION 3 -->
+  <h2>Corporate Implementation: The Sonic DNA Model</h2>
+
+  <p>For global corporations, developing a sonic identity begins with a foundational "Sonic DNA" — a long-form composition that serves as the source material for all brand audio assets. This DNA is a musical embodiment of the brand's core values, whether innovation, trust, warmth, or futurism.</p>
+
+  <h3>Case Study: Mastercard's 10-Layer Plan</h3>
+
+  <p>Mastercard collaborated with sound engineers, artists, and neuroscientists over two years to ensure their 6-note melody could resonate across cultures while remaining hummable. The system included a 3-second Sonic Signature for advertisement bookends, a 1.3-second Sonic Acceptance Sound for transaction confirmation, and an AI-powered tool allowing employees to generate brand-consistent custom tracks for internal or sponsorship use.</p>
+
+  <blockquote>
+    <p>Mastercard's introduction of sonic branding at checkout led to a 71% improvement in consumer perception of the merchant and a 4× increase in brand loyalty.</p>
+    <cite>Source: Mastercard Multisensory Branding research</cite>
+  </blockquote>
+
+  <!-- SECTION 4 -->
+  <h2>Creative Best Practices: Designing Iconic Sonic Logos</h2>
+
+  <p>A powerful sonic element must align with the brand's utility and reflect something unique about the product or service. KitKat's jingle, built around the tactile sound of breaking a chocolate bar, links the "break" ritual directly to its emotional benefit.</p>
+
+  <h3>Case Study: The Netflix "Tudum"</h3>
+
+  <p>Led by Todd Yellin, the Netflix sound was designed to create tension and release while signaling that "an amazing story" was about to begin. The primary impact was created by sound designer Lon Bender striking his wedding ring against a cabinet — then softened with muffled hits and a deeper anvil tone. The signature tonal swell was derived from a 1990s guitar phrase digitized and reversed to create a sense of cinematic unfolding.</p>
+
+  <blockquote>
+    <p>The Netflix "Tudum" achieves 94% recognition among streaming audiences — proving that sound can provide visceral branding that visual logos cannot reach as quickly.</p>
+    <cite>Source: Audiospheric / Mashable</cite>
+  </blockquote>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Sonic Logo</th>
+          <th>Primary Sound Source</th>
+          <th>Intended Response</th>
+          <th>Recall Metric</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Netflix "Tudum"</strong></td><td>Wedding ring + reversed guitar</td><td>Anticipation, release</td><td>94% Awareness</td></tr>
+        <tr><td><strong>Intel Bong</strong></td><td>Xylophone/Xylomarimba (5 notes)</td><td>Innovation, reliability</td><td>Benchmark Recognition</td></tr>
+        <tr><td><strong>McDonald's</strong></td><td>5-note vocal melody</td><td>Joy, familiarity</td><td>77% Likability</td></tr>
+        <tr><td><strong>Mastercard</strong></td><td>6-note melodic sequence</td><td>Security, trust</td><td>3.4× Trust Lift</td></tr>
+        <tr><td><strong>Tostitos</strong></td><td>Proprietary sound logo</td><td>Fun, snackability</td><td>38% Recall Lift</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>Artist Branding: Authentic Persona Construction</h2>
+
+  <p>For musical artists, branding is not a corporate layer added to music — it is an honest extension of identity that allows fans to recognize, connect with, and remember them in a saturated market. Effective artist branding requires defining a multi-dimensional persona before attempting to build any visual or sonic system.</p>
+
+  <ol class="body-list">
+    <li><strong>Define the USP:</strong> Clarify who the artist is and why they matter relative to competitors.</li>
+    <li><strong>Build a Brand Platform:</strong> Establish 2–3 core traits (e.g., "mystery," "rebellion," "intimacy") that anchor all creative decisions.</li>
+    <li><strong>Develop Genre Awareness:</strong> Understand the tropes of the genre — then find specific ways to subvert them for differentiation.</li>
+    <li><strong>Maintain Consistency:</strong> Ensure album artwork, social media graphics, and stage design all reflect the same visual narrative.</li>
+  </ol>
+
+  <h3>Case Study: Billie Eilish and Authentic Presence</h3>
+
+  <p>Eilish's identity operates across three layers — the real person, the performance persona, and song-specific characters — allowing her to move between subversion and vulnerability while maintaining brand coherence. Her deliberately "raw" visual aesthetic challenged societal norms around beauty and fashion and created a cultural phenomenon where fans emulated her style, turning her brand into a part of youth culture itself. Her social media strategy balances polished visuals with behind-the-scenes content that makes fans feel invested in the person, not just the music.</p>
+
+  <h3>Case Study: Taylor Swift and the "Era" Model</h3>
+
+  <p>Taylor Swift utilizes an "Era" model where each album cycle functions as a complete rebrand with its own color palette, fashion identity, and thematic narrative. This transforms a single release into a chapter of an evolving autobiography — encouraging fans to become active participants rather than passive listeners.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Storytelling Pillar</th>
+          <th>Swift Application</th>
+          <th>Independent Artist Recommendation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Narrative Evolution</td><td>"Eras" (Country → Pop → Indie)</td><td>Treat each EP as a distinct visual chapter</td></tr>
+        <tr><td>Engagement</td><td>Easter egg decoding</td><td>Use cryptic teasers and fan-only clues</td></tr>
+        <tr><td>Authenticity</td><td>Relatable underdog archetype</td><td>Share the "why" behind the music</td></tr>
+        <tr><td>Scarcity</td><td>Limited-time merch + reveals</td><td>Use 24-hour countdowns for single drops</td></tr>
+        <tr><td>Control</td><td>Re-recording catalog</td><td>Own your metadata and origin narrative</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2>Digital Virality and the Algorithmic Market</h2>
+
+  <p>In 2026, platform algorithms function as primary gatekeepers of music discovery, favoring content that drives high engagement and save rates over raw stream counts. The practical implication: artists must engineer strong hooks within the first 15 to 30 seconds of a track.</p>
+
+  <h3>Case Study: Lil Nas X and Genre Arbitrage</h3>
+
+  <p>Rather than promoting a song, Lil Nas X promoted a meme that used "Old Town Road" as its overlay. He listed the track on the less competitive country charts, then leveraged the controversy when it was removed to generate national attention. He also renamed his tracks on YouTube and SoundCloud to match viral lyric searches — so users hunting the meme found the full track.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Algorithmic Signal</th>
+          <th>Impact on Discovery</th>
+          <th>Strategic Best Practice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Skip Rate</td><td>Negative (stops promotion)</td><td>Hook listener in first 15 seconds</td></tr>
+        <tr><td>Save Rate</td><td>Positive (triggers Radar)</td><td>Direct ads toward Saves, not just Plays</td></tr>
+        <tr><td>Streams per Listener</td><td>Positive (quality signal)</td><td>Focus on catalog exploration</td></tr>
+        <tr><td>Discovery Mode</td><td>Prioritized placement</td><td>Accept 30% royalty trade-off on new drops</td></tr>
+        <tr><td>Metadata Accuracy</td><td>Critical for categorization</td><td>Ensure ISRC and credits are 100% accurate</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <aside>
+    <p class="aside-label">⚠ Emerging Risk</p>
+    <p>Deezer now receives approximately 50,000 AI-generated tracks per day, and up to 70% of those plays may be fraudulent. Data readiness — particularly metadata governance and AI detection systems — is becoming a critical operational differentiator for both brands and artists.</p>
+  </aside>
+
+  <!-- SECTION 7 -->
+  <h2>Retail Soundscapes: Atmospheric Strategy in Physical Environments</h2>
+
+  <p>For retail brands, music is a core component of atmospheric strategy — used alongside lighting, layout, and scent to create a cohesive brand experience. Research shows that 70% of consumers believe music enhances a company's image, and misaligned music can actively damage brand perception.</p>
+
+  <blockquote>
+    <p>Fast-paced music (110–130 BPM) is ideal for high-turnover environments or peak hours. Slower music (90–100 BPM) encourages customers to linger in luxury or specialty contexts, increasing average transaction value.</p>
+    <cite>Source: RetailNext / ZetaDisplay research</cite>
+  </blockquote>
+
+  <p>By 2026, AI-driven systems can adjust music tempo automatically based on live foot traffic data — playing faster music when stores are crowded to encourage turnover and slowing tempo during quiet periods to increase dwell time. Hyper-localization of playlists to reflect geographic and demographic nuances is also an emerging best practice for global retail brands.</p>
+
+  <!-- SECTION 8 -->
+  <h2>The 2026 Frontier: AI-Driven Sonic Systems</h2>
+
+  <p>Sonic branding has moved beyond isolated assets toward flexible "Sonic Systems" — musical frameworks designed to evolve with content formats and real-time campaign performance data. Brands are no longer building theme songs; they are deploying adaptive compositions generated by artist-trained AI.</p>
+
+  <p>Coca-Cola's "Coke SoundZ" initiative — an AI-powered instrument allowing fans to create music using brand sounds like the fizz of a can — represents the frontier of this trend. It enables a brand to maintain consistent auditory identity while allowing infinite platform-specific variations.</p>
+
+  <aside>
+    <p class="aside-label">⚠ Human Element Paradox</p>
+    <p>As AI music generation scales, engagement drops significantly without the presence of a human composer. The most successful brands in 2026 will be those that understand where AI creates leverage (speed, scale) and where human hands are required for emotional honesty and relatability.</p>
+  </aside>
+
+  <p>Immersive spatial audio is also entering mainstream production — mapping sound sources in 3D space to create depth and direction. Applications range from health and wellness environments using natural soundscapes to cultural heritage sites using spatial guided tours, to live brand activations creating immersive "sound bubbles" around the consumer.</p>
+
+  <!-- SECTION 9 -->
+  <h2>Synthesis: Best Practices for a Multisensory Future</h2>
+
+  <ol class="body-list">
+    <li><strong>Lead with Narrative.</strong> Use sound to tell a story of growth, trust, or resilience. Build emotional equity through consistent storytelling, not filler.</li>
+    <li><strong>Define the DNA.</strong> Start with a comprehensive Sonic DNA and derive all smaller assets — logos, UI sounds, acceptance tones — from this core mnemonic to ensure coherence at scale.</li>
+    <li><strong>Leverage Psychology.</strong> Deploy tempo and BPM strategically to manage customer behavior and arousal in retail and digital environments.</li>
+    <li><strong>Prioritize Authenticity.</strong> For artists, branding must be an honest extension of the self. Audiences value relatability over artificial polish.</li>
+    <li><strong>Optimize for the Algorithm.</strong> Understand and trigger specific platform signals — save rates, low skip rates, catalog exploration — through high-quality hooks and consistent release schedules.</li>
+    <li><strong>Embrace Multisensory Synergy.</strong> Align sound with visuals, haptics, and physical design to create a "dual-coding" effect that boosts recall by nearly 10×.</li>
+    <li><strong>Future-Proof with AI.</strong> Use AI to scale production and personalize experiences, but keep the human element at the core of creative decisions for emotional connection.</li>
+  </ol>
+
+</div>
+
+<footer>
+  Built with <a href="https://www.bearbrown.co">bearbrown.co</a> · AI tools for educators, creators &amp; founders
+</footer>
+
+</body>
+</html>
