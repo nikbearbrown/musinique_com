@@ -79,6 +79,7 @@ export function scanHtmlSubdirs(dir: string): GroupedHtmlDocs[] {
     const docs = scanHtmlDir(fullPath).map(doc => ({
       ...doc,
       slug: `${entry}/${doc.slug}`,
+      tags: doc.tags.includes(entry) ? doc.tags : [entry, ...doc.tags],
     }))
 
     if (docs.length > 0) {
