@@ -20,15 +20,16 @@ interface Group {
   docs: Doc[]
 }
 
-export default function NotesBrowser({ groups }: { groups: Group[] }) {
+export default function NotesBrowser({ groups, filterTags = [] }: { groups: Group[]; filterTags?: string[] }) {
   const [query, setQuery] = useState('')
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
   const allTags = useMemo(() => {
+    if (filterTags.length > 0) return filterTags
     const set = new Set<string>()
     groups.forEach(g => g.docs.forEach(d => d.tags.forEach(t => set.add(t))))
     return Array.from(set).sort()
-  }, [groups])
+  }, [groups, filterTags])
 
   const filteredGroups = useMemo(() => {
     return groups

@@ -1,4 +1,5 @@
 import { join } from 'path'
+import { readFileSync } from 'fs'
 import type { Metadata } from 'next'
 import { scanHtmlSubdirs } from '@/lib/html-meta'
 import NotesBrowser from './NotesBrowser'
@@ -13,6 +14,12 @@ export const metadata: Metadata = {
 export default function NotesPage() {
   const groups = scanHtmlSubdirs(join(process.cwd(), 'public', 'notes'))
 
+  let filterTags: string[] = []
+  try {
+    const raw = readFileSync(join(process.cwd(), 'public', 'notes', 'filters.json'), 'utf-8')
+    filterTags = JSON.parse(raw)
+  } catch {}
+
   return (
     <div className="container px-4 md:px-6 mx-auto py-12">
       <div className="max-w-5xl mx-auto">
@@ -20,7 +27,7 @@ export default function NotesPage() {
         <p className="text-muted-foreground mb-10">
           Browse notes and documentation.
         </p>
-        <NotesBrowser groups={groups} />
+        <NotesBrowser groups={groups} filterTags={filterTags} />
       </div>
     </div>
   )
