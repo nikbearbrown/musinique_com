@@ -7,6 +7,9 @@ export interface HtmlDocMeta {
   title: string
   description: string
   tags: string[]
+  author?: string
+  category?: string
+  slideCount?: string
 }
 
 export interface GroupedHtmlDocs {
@@ -40,6 +43,9 @@ export function scanHtmlDir(dir: string): HtmlDocMeta[] {
     let title = titleCase(slug)
     let description = ''
     let tags: string[] = []
+    let author: string | undefined
+    let category: string | undefined
+    let slideCount: string | undefined
 
     try {
       const html = readFileSync(join(dir, filename), 'utf-8')
@@ -51,9 +57,19 @@ export function scanHtmlDir(dir: string): HtmlDocMeta[] {
       const k = extractTag(html, /<meta\s+name=["']keywords["']\s+content=["']([^"']+)["']/i)
         ?? extractTag(html, /<meta\s+content=["']([^"']+)["']\s+name=["']keywords["']/i)
       if (k) tags = k.split(',').map(t => t.trim()).filter(Boolean)
+
+      const a = extractTag(html, /<meta\s+name=["']author["']\s+content=["']([^"']+)["']/i)
+        ?? extractTag(html, /<meta\s+content=["']([^"']+)["']\s+name=["']author["']/i)
+      if (a) author = a
+      const cat = extractTag(html, /<meta\s+name=["']category["']\s+content=["']([^"']+)["']/i)
+        ?? extractTag(html, /<meta\s+content=["']([^"']+)["']\s+name=["']category["']/i)
+      if (cat) category = cat
+      const sc = extractTag(html, /<meta\s+name=["']slide-count["']\s+content=["']([^"']+)["']/i)
+        ?? extractTag(html, /<meta\s+content=["']([^"']+)["']\s+name=["']slide-count["']/i)
+      if (sc) slideCount = sc
     } catch {}
 
-    return { slug, filename, title, description, tags }
+    return { slug, filename, title, description, tags, author, category, slideCount }
   })
 }
 
