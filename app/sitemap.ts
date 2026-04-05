@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { neon } from '@neondatabase/serverless'
 import { join } from 'path'
-import { scanHtmlDir } from '@/lib/html-meta'
+import { scanHtmlDir, scanHtmlSubdirs } from '@/lib/html-meta'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.musinique.com'
 
@@ -15,21 +15,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE_URL}/substack`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE_URL}/playlists`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE_URL}/slides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/talks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/privacy/cookies`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/terms-of-service`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
   ]
 
-  // Slides (filesystem-driven)
-  const slideDocs = scanHtmlDir(join(process.cwd(), 'public', 'slides'))
-  for (const s of slideDocs) {
-    entries.push({
-      url: `${BASE_URL}/slides/${s.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    })
+  // Talks (filesystem-driven, subfolder-grouped)
+  const talkGroups = scanHtmlSubdirs(join(process.cwd(), 'public', 'talks'))
+  for (const g of talkGroups) {
+    for (const doc of g.docs) {
+      entries.push({
+        url: `${BASE_URL}/talks/${doc.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      })
+    }
   }
 
   try {
